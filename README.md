@@ -1,58 +1,45 @@
-# Comprehensive Solver
+# Comprehensive Physics Solver
 
-## Overview
-This repository contains the code for a comprehensive solver that integrates multiple theoretical physics models including quantum mechanics, general relativity, string theory, loop quantum gravity, and electromagnetism.
+This project integrates various physics calculations into a comprehensive solver, including quantum mechanics, general relativity, string theory, loop quantum gravity, electromagnetism, and cosmology.
 
 ## Features
-- Quantum Mechanics: Schrödinger Equation
-- General Relativity: Einstein Field Equations
-- String Theory: Nambu-Goto Action
-- Loop Quantum Gravity: Area Calculation
-- Electromagnetism: Lorentz Force
-- Dark Matter and Dark Energy: Density Contributions
+- Schrödinger Equation Solver
+- Einstein Field Equations Solver
+- Nambu-Goto Action Calculation
+- Loop Quantum Gravity Area Calculation
+- Lorentz Force Calculation
+- Dark Matter and Dark Energy Density Contributions
+- Visualization Tools with Plotly
 
-## Installation
-1. Clone the repository:
+## Requirements
+- NumPy
+- CuPy
+- Dask
+- Plotly
+- Joblib
+- SciPy
+- Astropy
+- Flask
+- Numba
+- Pytest
+
+## Usage
+1. Clone the repository
     ```sh
-    git clone https://github.com/yourusername/comprehensive-solver
-    cd comprehensive-solver
+    git clone https://github.com/Cbaird26/ComprehensivePhysicsSolver.git
+    cd ComprehensivePhysicsSolver
     ```
-2. Install dependencies:
+2. Install dependencies
     ```sh
     pip install -r requirements.txt
     ```
-
-## Usage
-### Running the Solver
-1. Run the main solver:
+3. Run the main script
     ```sh
-    python solver.py
-    ```
-2. Run the web interface:
-    ```sh
-    flask run
+    python main.py
     ```
 
-### API Endpoint
-#### `/solve` (POST)
-- **Description:** Solves the comprehensive physics model based on provided data.
-- **Payload:** JSON object containing parameters for the solver.
-- **Response:** JSON object with the result.
+## Example
+Provide a detailed example of how to use your solver here.
 
-#### Example
-```sh
-curl -X POST -H "Content-Type: application/json" -d '{
-  "X": [[0, 1], [1, 2], ...],
-  "T": 1.0,
-  "spin_labels": [1, 2, 3],
-  "gamma": 0.2375,
-  "E": [[0, 0, 1], [1, 0, 0], ...],
-  "B": [[0, 1, 0], [0, 0, 1], ...],
-  "rho_dm": 0.3,
-  "rho_de": 0.7,
-  "a": 0.5,
-  "psi": [0, 1, 0, -1, ...],
-  "x": [0, 1, 2, 3, ...],
-  "potential": "lambda x: 0.5 * m_e * (x**2)",
-  "T_mu_nu": [[0, 1], [1, 0], ...]
-}' http://localhost:5000/solve
+## Contributing
+Feel free to submit issues or pull requests to contribute to the project.
