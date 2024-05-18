@@ -14,6 +14,8 @@ hbar = const.hbar  # Reduced Planck's constant
 # Quantum-Relativity Framework
 def quantum_gravity_energy(mass):
     """Calculate the energy in the quantum gravity regime."""
+    if mass < 0:
+        raise ValueError("Mass should be non-negative.")
     return np.sqrt(G * mass**3 / hbar)
 
 def relativistic_energy(mass, velocity):
@@ -62,7 +64,7 @@ sol = solve_ivp(ecological_simulation, time_span, initial_conditions, method='RK
 plt.figure(figsize=(12, 6))
 plt.plot(sol.t, sol.y[0], label='Resource Use')
 plt.plot(sol.t, sol.y[1], label='Pollution')
-plt.xlabel('Time')
+plt.xlabel('Time (s)')
 plt.ylabel('Levels')
 plt.title('Ecological Impact Simulation')
 plt.legend()
@@ -74,13 +76,17 @@ X = np.array([[1], [2], [3], [4], [5]])
 y = np.array([1.5, 3.5, 2.5, 5.5, 4.5])
 linear_model = linear_regression_model(X, y)
 predictions = linear_model.predict(X)
-print(f"Linear Regression Predictions: {predictions}")
+print("Linear Regression Predictions:")
+for x, pred in zip(X, predictions):
+    print(f"Input: {x}, Prediction: {pred}")
 
 # Example usage of neural network
 nn_model = neural_network_model(1)
 nn_model.fit(X, y, epochs=10, verbose=0)
 nn_predictions = nn_model.predict(X)
-print(f"Neural Network Predictions: {nn_predictions}")
+print("Neural Network Predictions:")
+for x, pred in zip(X, nn_predictions):
+    print(f"Input: {x}, Prediction: {pred}")
 
 # OmniSolve System Integration
 def omni_solve_system(mass, velocity, resource_use, pollution, X, y):
@@ -105,7 +111,12 @@ resource_use = 0.8
 pollution = 0.3
 
 result = omni_solve_system(mass, velocity, resource_use, pollution, X, y)
-print(f"Unified Energy: {result['energy']} J")
-print(f"Ecological Impact: {result['ecological_impact']}")
-print(f"Linear Regression Predictions: {result['linear_regression_predictions']}")
-print(f"Neural Network Predictions: {result['neural_network_predictions']}")
+print(f"Unified Energy: {result['energy']:.2e} J")
+print(f"Ecological Impact: {result['ecological_impact']:.2f}")
+print("Linear Regression Predictions:")
+for x, pred in zip(X, result['linear_regression_predictions']):
+    print(f"Input: {x}, Prediction: {pred}")
+print("Neural Network Predictions:")
+for x, pred in zip(X, result['neural_network_predictions']):
+    print(f"Input: {x}, Prediction: {pred}")
+
