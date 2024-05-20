@@ -1,6 +1,21 @@
-# OmniSolve: The Universal Solution
-# Integrating advanced simulations and analyses across various scientific domains
+import subprocess
+import sys
 
+# Function to install required packages
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = ["networkx", "matplotlib", "sympy", "pywt", "pandas", "scipy"]
+
+# Install missing packages
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
+
+# Importing packages after ensuring they are installed
 import streamlit as st
 import numpy as np
 import networkx as nx
