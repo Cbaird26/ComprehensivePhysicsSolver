@@ -55,13 +55,13 @@ jobs:
             print(f'⚠ streamlit import issue: {e}')
         " || exit 1
     
-    - name: Run tests
+    - name: Run tests (optional)
       run: |
         if [ -d "tests" ]; then
           python -m pytest tests/ -v --tb=short || exit 1
         else
-          echo "⚠ No tests directory found. Tests will be required once test harness is added."
-          # For now, don't fail if no tests (will be required later)
+          echo "⚠ No tests directory found. Skipping tests (not required for this repo)."
+          exit 0
         fi
     
     - name: Check code style (basic)
