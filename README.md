@@ -7,6 +7,8 @@
 
 # OmniSolve: The Universal Solution System
 
+[![CI](https://github.com/Cbaird26/ComprehensivePhysicsSolver/workflows/CI/badge.svg)](https://github.com/Cbaird26/ComprehensivePhysicsSolver/actions)
+
 ## Overview
 
 OmniSolve is a comprehensive software system that integrates scientific principles from quantum gravity and relativity, ecological impact modeling, and machine learning into a unified framework. This system is designed to address complex problems by providing a holistic approach that combines physics, environmental science, and artificial intelligence.
