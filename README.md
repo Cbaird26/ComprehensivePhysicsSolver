@@ -34,7 +34,13 @@ OmniSolve is a comprehensive software system that integrates scientific principl
 To install the required packages, run:
 
 ```bash
-pip install numpy matplotlib scipy scikit-learn tensorflow
+pip install -r requirements.txt
+```
+
+For advanced ML or quantum features, install optional dependencies:
+
+```bash
+pip install -r requirements-ml.txt
 ```
 
 ## Experiments
