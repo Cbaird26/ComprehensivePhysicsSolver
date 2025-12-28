@@ -1,3 +1,10 @@
+> **Status:** Active  
+> **Canonical Repository:** [MQGT-SCF](https://github.com/Cbaird26/MQGT-SCF)  
+> **Purpose:** Comprehensive physics solver integrating quantum gravity, relativity, and ML.  
+> **Not for:** Core MQGT-SCF theory development - see canonical repository.
+
+---
+
 # OmniSolve: The Universal Solution System
 
 ## Overview
