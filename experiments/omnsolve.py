@@ -1,3 +1,16 @@
+"""
+OmniSolve Demo Script
+
+A demonstration script showcasing various ML and quantum computing capabilities:
+- Environment monitoring using linear regression
+- Personalized healthcare predictions
+- Smart grid management with clustering
+- Quantum computing tasks with Qiskit
+
+This is an experimental/illustrative script, not part of the core application.
+Useful for understanding the range of capabilities but not production code.
+"""
+
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.cluster import KMeans
@@ -28,17 +41,3 @@ def quantum_computing_task():
     statevector = result.get_statevector()
     return statevector
 
-if __name__ == "__main__":
-    data = {
-        'X': np.random.rand(100, 5),
-        'y': np.random.randint(2, size=100)
-    }
-    environment_predictions = monitor_environment(data)
-    healthcare_predictions = personalized_healthcare(data)
-    grid_labels = smart_grid_management(data['X'])
-    quantum_result = quantum_computing_task()
-
-    print("Environmental Predictions:", environment_predictions)
-    print("Healthcare Predictions:", healthcare_predictions)
-    print("Smart Grid Labels:", grid_labels)
-    print("Quantum Computing Result:", quantum_result)

@@ -35,3 +35,8 @@ To install the required packages, run:
 
 ```bash
 pip install numpy matplotlib scipy scikit-learn tensorflow
+```
+
+## Experiments
+
+Experimental and demo scripts are in the `experiments/` directory. These are illustrative examples and not part of the core application.
